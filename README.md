@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MLOps Workspace API
 
 University coursework REST API built with **JAX-RS (Jersey)** + embedded **Grizzly** HTTP server. No Spring, no database — all data lives in memory in `java.util` collections (`HashMap`/`ArrayList`, via `ConcurrentHashMap`).
@@ -126,3 +127,6 @@ If the workspace still has linked models → expect **409** with `{"error":"Work
 
 ## Logging
 Every request/response is logged via `java.util.logging.Logger` (method, URI, and response status) by `LoggingFilter`, visible in the console where the server is running.
+=======
+# mlops-api
+>>>>>>> 683569b808e8a2327221149b84b238ab75033fed
