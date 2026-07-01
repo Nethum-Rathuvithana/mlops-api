@@ -1,4 +1,4 @@
-  MLOps Pipeline Management API (JAX-RS)
+  # MLOps Pipeline Management API (JAX-RS)
   
  Project Overview
 
@@ -23,13 +23,13 @@ Maven installed
 Internet connection (for dependencies download)
 Steps
 
-# 1. Navigate to project folder
+ 1. Navigate to project folder
 cd mlops-api
 
-# 2. Build project
+ 2. Build project
 mvn clean install
 
-# 3. Run server
+ 3. Run server
 mvn exec:java
 
 Server Base URL
