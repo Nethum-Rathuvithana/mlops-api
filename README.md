@@ -1,6 +1,6 @@
   # MLOps Pipeline Management API (JAX-RS)
   
- Project Overview
+ # Project Overview
 
 This project is a RESTful API built using Jakarta RESTful Web Services (JAX-RS) with an embedded Grizzly HTTP server. It simulates an MLOps (Machine Learning Operations) platform where users can manage ML Workspaces, Machine Learning Models, and Evaluation Metrics.
 
@@ -15,7 +15,7 @@ Exception-driven error handling using JAX-RS ExceptionMappers
 Request/response logging using filters
 JSON serialization using Jackson provider
 
-  How to Run the Project
+  # How to Run the Project
   
 Prerequisites
 Java 17+
@@ -36,7 +36,7 @@ Server Base URL
 
 http://localhost:8080/api/v1
 
-  Sample API Testing (curl examples)
+  # Sample API Testing (curl examples)
   
 1. Discovery Endpoint
 curl http://localhost:8080/api/v1/
@@ -59,7 +59,7 @@ curl -X POST http://localhost:8080/api/v1/models/<model-id>/metrics \
 -H "Content-Type: application/json" \
 -d '{"accuracyScore":0.92}'
 
-  PART 1: Setup & Discovery
+  # PART 1: Setup & Discovery
   
 Q1: Role of MessageBodyWriter / JSON Provider
 
@@ -77,7 +77,7 @@ This improves scalability because any server instance can handle any request wit
 
 Statelessness also simplifies recovery, monitoring, and system design since no server-side session synchronization is required.
 
-  PART 2: Workspace Management
+  # PART 2: Workspace Management
   
 Q1: Cache-Control Benefits
 
@@ -97,7 +97,7 @@ The HEAD method should be used when a client wants to verify resource existence 
 
 Unlike GET, HEAD returns only headers, making it lightweight and bandwidth-efficient. This is useful for checking whether a workspace exists without retrieving full JSON data.
 
-  PART 3: Model Operations
+  # PART 3: Model Operations
   
 Q1: Why Server Generates UUID
 
@@ -119,7 +119,7 @@ Scikit Learn & Tools → Scikit%20Learn%20%26%20Tools
 
 This is necessary because URLs follow a strict format defined by RFC standards, and unencoded characters may break parsing or lead to incorrect request interpretation.
 
-  PART 4: Sub-Resources
+  # PART 4: Sub-Resources
   
 Q1: Class-level vs Method-level @Produces
 
@@ -133,7 +133,7 @@ When a new evaluation metric is added, the system updates the parent model’s l
 
 This design reflects real-world MLOps systems where model performance tracking must remain synchronized with evaluation history.
 
-  PART 5: Error Handling & Logging
+  # PART 5: Error Handling & Logging
   
 Q1: 4xx vs 5xx Status Codes
 
@@ -158,7 +158,7 @@ Response status code
 
 This information is essential for debugging, monitoring, and tracing API behavior in production systems.
 
-  Summary
+ # Summary
 
 This API demonstrates:
 
@@ -169,7 +169,7 @@ Exception-driven error handling
 Stateless scalable design
 Real-world MLOps simulation
 
-  Final Note
+  # Final Note
 
 This project strictly follows coursework constraints:
 
